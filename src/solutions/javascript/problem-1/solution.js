@@ -1,6 +1,8 @@
-const name = "Rayyan";
+function declareVariables() {
+    const name = "Rayyan";
 let age = 20;
 var isStudent = true;
+return {name,age,isStudent}
+  }
+console.log(declareVariables());
 
-const object = { name, age, isStudent};
-console.log(object);
