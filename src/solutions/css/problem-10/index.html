@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <style>
+      :root {
+        --base-font: 16px;
+        --spacing: 1rem;
+      }
+
+      html {
+        font-size: var(--base-font);
+      }
+
+      .nav-brand img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing);
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: var(--spacing);
+        list-style: none;
+        transition: all 0.3s ease;
+      }
+
+      .nav-menu:hover {
+        color: #0088a9;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: var(--spacing);
+      }
+
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+
+      .card h3 {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .sidebar {
+        width: 300px;
+        padding: var(--spacing);
+      }
+
+      .sidebar h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      /* ✅ Media Queries */
+      @media (max-width: 768px) {
+        .sidebar {
+          display: none;
+        }
+
+        :root {
+          --base-font: 14px;
+        }
+
+        .sidebar {
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .nav-toggle {
+          display: block;
+        }
+
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          background: white;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <nav class="nav">
+      <div class="nav-brand"><img src="logo.png" alt="" /></div>
+      <button class="nav-toggle">☰</button>
+      <ul class="nav-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div class="cards">
+        <div class="card">
+          <img src="pizza.png" alt="Pizza" />
+          <h3>Delicious Pizza</h3>
+          <p>Cheesy and loaded with toppings!</p>
+        </div>
+        <div class="card">
+          <img src="cake.png" alt="Cake" />
+          <h3>Chocolate Cake</h3>
+          <p>Rich and creamy delight!</p>
+        </div>
+        <div class="card">
+          <img src="drink.png" alt="Drink" />
+          <h3>Refreshing Drink</h3>
+          <p>Cool and fizzy!</p>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <!-- Sidebar content -->
+        <h2>Special Offers</h2>
+        <p>Get 20% off on all orders!</p>
+        <img src="offer.png" alt="Special Offer" />
+      </aside>
+    </div>
+  </body>
+</html>
