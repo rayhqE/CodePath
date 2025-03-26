@@ -1,0 +1,3 @@
+Hello NodeJS. 
+This is a sample text file.
+We will pipe it down to the console.
