@@ -1,0 +1,17 @@
+{
+  "name": "my-utility-package",
+  "version": "1.0.0",
+  "description": "A utility package for various functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "start": "node solution.js"
+  },
+  "keywords": [
+    "\"utility\"",
+    "\"npm\""
+  ],
+  "author": "Rayyan",
+  "license": "ISC",
+  "dependencies": {}
+}
