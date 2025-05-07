@@ -1,9 +1,9 @@
 {
   "name": "problem-4",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "solution.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node solution.js"
   },
   "author": "",
   "license": "ISC",
